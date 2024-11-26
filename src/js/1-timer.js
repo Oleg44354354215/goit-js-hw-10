@@ -36,18 +36,25 @@ const options = {
 flatpickr('#datetime-picker', options);
 
 btn.addEventListener('click', function () {
-    if (userSelectedDate) {
-      const timeDifference = userSelectedDate - new Date();
-      const { days, hours, minutes, seconds } = convertMs(timeDifference);
-        (days, hours, minutes, seconds);
-        btn.disabled = true;
-
+  if (userSelectedDate) {
       interval = setInterval(() => {
-        const { days, hours, minutes, seconds } = convertMs(userSelectedDate - new Date());
-        updateTimer(days, hours, minutes, seconds);
+          const timeDifference = userSelectedDate - new Date();
+          if (timeDifference <= 0) {
+              clearInterval(interval);
+              updateTimer(0, 0, 0, 0); // Устанавливаем таймер в ноль
+              iziToast.success({
+                  title: 'Completed',
+                  message: 'Timer has reached zero!',
+              });
+              return;
+          }
+
+          const { days, hours, minutes, seconds } = convertMs(timeDifference);
+          updateTimer(days, hours, minutes, seconds);
       }, 1000);
-    }
-})
+      btn.disabled = true;
+  }
+});
 
 function convertMs(ms) {
   const second = 1000;
