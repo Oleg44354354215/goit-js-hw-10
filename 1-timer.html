@@ -3,9 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Timer</title>
+<style>
+  .value{
+    display: block;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    font-family: "Montserrat", sans-serif;
+  }
+  .timer{
+    display: flex;
+    margin-top: 32px;
+    max-width: 346px;
+    gap:44px
+  }
+  .label{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2e2f42;
+  }
+  .field{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column; 
+  }
+  .date{
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    width: 256px;
+    height: 40px;
+    background: #fff;
+    padding-left: 16px;
+    margin-top: 30px;
+  }
+  .date:hover{
+    border: 1px solid #000;
+  }
+  .date.active{
+    border: 1px solid #4e75ff;
+  }
+  .date.disabled{
+    border: 1px solid #808080;
+    background: #fafafa;
+  }
+  button{
+    border-radius: 8px;
+    padding: 8px 16px;
+    border: none;
+    width: 75px;
+    cursor: pointer;
+    background-color: #cfcfcf;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #989898;
+    margin-left: 8px;
+  }
+  button{
+    background: #4e75ff;
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #fff;
+  }
+  button:hover{
+    background: #6c8cff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+  button:disabled{
+    background: #cfcfcf;
+  }
+</style>
+<script type="module" crossorigin src="/goit-js-hw-10/1-timer.js"></script>
+<link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-B5Qt9EMX.js">
+<link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
+<link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
+<link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/reset-CsUp2uTj.css">
+
 <body>
+    <section>
+        <a href="./index.html" class ="back">Go home</a>
+    </section>
     
+    <input type="text" id="datetime-picker" class="date" />
+<button type="button" data-start onclick="" disabled="true">Start</button>
+
+<div class="timer">
+  <div class="field">
+    <span class="value" data-days>00</span>
+    <span class="label">Days</span>
+  </div>
+  <div class="field">
+    <span class="value" data-hours>00</span>
+    <span class="label">Hours</span>
+  </div>
+  <div class="field">
+    <span class="value" data-minutes>00</span>
+    <span class="label">Minutes</span>
+  </div>
+  <div class="field">
+    <span class="value" data-seconds>00</span>
+    <span class="label">Seconds</span>
+  </div>
+</div>
+
 </body>
 </html>

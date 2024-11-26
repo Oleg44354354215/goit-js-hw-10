@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snackbar</title>
+  <script type="module" crossorigin src="/goit-js-hw-10/2-snackbar.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/reset-CsUp2uTj.css">
 </head>
+<style>
+    body{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #2e2f42;
+    }
+    .fon{
+        display: block;
+        margin-bottom: 16px;
+        letter-spacing: 0.04em;
+    }
+    .kuu{
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 331px;
+        height: 40px;
+        margin-top: 8px;
+        border: 1px solid #808080;
+        border-radius: 4px;
+        padding-left:16px;
+        padding-right: 16px;
+    }
+    .kuu:hover{
+        border: 1px solid #000;
+    }
+    .kuu:active{
+         border: 1px solid #4e75ff;
+    }
+    fieldset{
+        padding: 0;
+        margin: 0;
+        width: 360px;
+        height: 76px;
+        border-radius: 4px;
+        stroke-width: 1px;
+        stroke: #808080;
+        margin-bottom: 24px;
+    }
+    legend{
+        margin-left: 28px;
+        padding-left: 4px;
+        padding-right: 4px;
+        letter-spacing: 0.04em;
+    }
+    button{
+        border-radius: 8px;
+        border: none;
+        padding: 8px 16px;
+        width: 360px;
+        height: 40px;
+        background: #4e75ff;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #fff;
+    }
+    button:hover{
+        background-color: #6c8cff;
+    }
+    .centair{
+        display: flex;
+        justify-content: center;
+        gap: 48px;
+        margin-top: 14px;   
+    }
+</style>
 <body>
-    
+    <section>
+        <a href="./index.html" class ="back">Go home</a>
+    </section>
+
+    <form class="form">
+        <div class = "divchik">
+            <label class="fon">
+                Delay (ms)
+                <input class="kuu" type="number" name="delay" required />
+              </label>
+        </div>
+      
+        <fieldset class="vodopo">
+          <legend>State</legend>
+        <div class="centair">
+            <label>
+                <input type="radio" name="state" value="fulfilled" required />
+                Fulfilled
+              </label>
+              <label>
+                <input type="radio" name="state" value="rejected" required />
+                Rejected
+              </label>
+        </div>
+        </fieldset>
+      
+        <button type="submit">Create notification</button>
+      </form>
+
 </body>
 </html>
