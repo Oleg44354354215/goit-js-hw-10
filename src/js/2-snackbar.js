@@ -25,7 +25,7 @@ form.addEventListener('submit', function (event) {
     (result) => {
       iziToast.success({
         title: 'Ok',
-        message: `Fulfilled promise in ${result}ms`,
+        message: `✅ Fulfilled promise in ${result}ms`,
         position:`topRight`,
         maxWidth:`383px`,
         color: `#59a10d`,
@@ -39,7 +39,7 @@ form.addEventListener('submit', function (event) {
     (result) => {
       iziToast.error({
         title: 'Error',
-        message: ` Rejected promise in ${result}ms`,
+        message: `❌ Rejected promise in ${result}ms`,
         position:`topRight`,
         maxWidth:`302px`,
         color: `#ef4040`,
