@@ -30,7 +30,6 @@ form.addEventListener('submit', function (event) {
         maxWidth:`383px`,
         color: `#59a10d`,
         titleColor:`white`,
-        iconUrl:`../img/Group.png`,
         messageColor:`white`,
 
       });
@@ -44,7 +43,6 @@ form.addEventListener('submit', function (event) {
         maxWidth:`302px`,
         color: `#ef4040`,
         titleColor:`white`,
-        iconUrl:`../img/bix.png`,
         messageColor:`white`,
     });
     }
