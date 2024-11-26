@@ -1,5 +1,7 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import iconResolve from '../img/Group.png'
+import iconReject from '../img/bix.png'
 
 const form = document.querySelector('.form');
 
@@ -25,11 +27,12 @@ form.addEventListener('submit', function (event) {
     (result) => {
       iziToast.success({
         title: 'Ok',
-        message: `✅ Fulfilled promise in ${result}ms`,
+        message: `Fulfilled promise in ${result}ms`,
         position:`topRight`,
         maxWidth:`383px`,
         color: `#59a10d`,
         titleColor:`white`,
+        iconUrl:`${iconResolve}`,
         messageColor:`white`,
 
       });
@@ -38,11 +41,12 @@ form.addEventListener('submit', function (event) {
     (result) => {
       iziToast.error({
         title: 'Error',
-        message: `❌ Rejected promise in ${result}ms`,
+        message: `Rejected promise in ${result}ms`,
         position:`topRight`,
         maxWidth:`302px`,
         color: `#ef4040`,
         titleColor:`white`,
+        iconUrl:`${iconReject}`,
         messageColor:`white`,
     });
     }
